@@ -36,7 +36,37 @@
             <button>calculator</button>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script>
+        class birthDate {
+    constructor(birth) {
+        this.birth = birth;
+    }
+    calculator_Age() {
+        const todayDate = new Date();
+        const birthDate = new Date(this.birth);
+        let diff = todayDate.getTime() - birthDate.getTime();
+        let counterY = (1000 * 60 * 60 * 24 * 365);
+        let counterM = (1000 * 60 * 60 * 24 * 31);
+        let counterD = (1000 * 60 * 60 * 24);
+        let year = Math.floor(diff / counterY);
+        diff = diff % counterY;
+        let month = Math.floor(diff / counterM);
+        diff = diff % counterM;
+        let day = Math.floor(diff / counterD);
+        let result = `years:${year} month:${month} day:${day}`
+        return result;
+    }
+}
+let input;
+document.querySelector("button").addEventListener("click", () => {
+    input = document.querySelector("input").value;
+    const newBirthday = new birthDate(input);
+    document.querySelector(".age_log").innerHTML = newBirthday.calculator_Age();
+    if(document.querySelector("input").value=null){
+        console.log('years:NaN month:NaN day:NaN');
+    }
+})
+    </script>
 </body>
 
 </html>
