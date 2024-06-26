@@ -2,71 +2,147 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
-
+    <title>BOOTSTRAP TASK</title>
     <style>
-        body {
-            display: flex;
-            height: 120vh;
-            justify-content: center;
+        a {
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.529);
         }
 
-        div {
-            margin: 25px 10px;
+        a:hover {
+            text-decoration: none;
+            color: black;
         }
 
-        b {
-            font-size: 30px;
+        input {
+            height: 35px;
+            border: none;
+            border: 1px;
+            border-radius: 5px;
+        }
+
+        .bg-img {
+            width: 100%;
+            height: 450px;
+            background-image: url(img-1.png);
+            background-size: cover;
+            border-radius: 14px;
+        }
+
+        .footer {
+            background-image: linear-gradient(to right, rgb(67, 67, 67), rgb(106, 178, 246));
         }
     </style>
 </head>
 
 <body>
     <div>
-        <div>
-            <b>Age calculator</b>
+        <div class="d-flex justify-content-center">
+            <img src="logo.png" alt="">
         </div>
-        <div><b style="font-size: 20px;" class="age_log"></b></div>
-        <div>
-            <input type="text" placeholder="yyyy-mm-dd">
+        <!-- navbar -->
+        <div style="background-color:rgb(57, 194, 240);" class="navbar my-5 p-2">
+            <div class="navbar-nav mr-auto d-md-inline">
+                <a class="d-block d-md-inline m-3 " href="#">Link 1</a>
+                <a class="d-block d-md-inline m-3 " href="#">Link 2</a>
+                <a class="d-block d-md-inline m-3 " href="#">Link 3</a>
+            </div>
+            <div class="navbar-nav ml-auto d-md-inline">
+                <input class="text-center my-3 d-block d-md-inline" type="search" placeholder="Search">
+                <button class="btn my-3 bg-primary d-block d-md-inline"><i></i>search</button>
+            </div>
         </div>
-        <div>
-            <button>calculator</button>
+        <!-- end of navbar -->
+        <div class="container-fluid">
+            <div class="row justify-content-md-center my-5">
+                <div class="col-md-8 col-12 bg-img">
+                    <div class="row justify-content-md-center">
+                        <div class="col-7">
+                            <div style="border-radius: 10px;" class="bg-secondary m-3 mt-5 p-3">
+                                <img src="cache_60889691.png" width="100%" alt="">
+                                <div class="my-2">
+                                    <span style="font-size: 1.4vw;">In der Schornau 25 A44892 Bochum</span><br>
+                                    <span style="font-size: 1.4vw;">Telefon: 0234 640 55 877 Telefax: 0234 640 55
+                                        879</span><br>
+                                    <span style="font-size: 1.4vw;">E-Mail: info@radiochirurgie-rub.de</span><br>
+                                </div>
+                                <button style="color: black;" class="btn btn-secondary my-3"><b>See profile</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-secondary text-center">
+                <div style="color: rgb(49, 163, 202);" class="py-3">
+                    <div class="my-3 h5">Die Radiochirurgie - Hirntumore behandeln:</div>
+                    <span class="h6">Die Behandlung von Hirntumoren (Neuroonkologie) stellt eine interdisziplinäre und
+                        technische Herausforderung dar. Im Gamma Knife Zentrum Bochum wird dazu eine spezielle Form der
+                        Strahlentherapie eingesetzt: Die Radiochirurgie. Das Gamma Knife Zentrum Bochum ist auf die
+                        Behandlung von Hirntumoren (Neuroonkologie) spezialisiert. Die Behandlung erfordert die
+                        Zusammenarbeit der medizinischen Fachrichtungen Neuroonkologie / Strahlentherapie /
+                        Neuroradiologie
+                        / Neurochirurgie.</span>
+                </div>
+                <button class="btn btn-primary my-3"><i class=" fa fa-circle-o-notch fa-spin mx-1"></i>Loading</button>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-9 m-3 col-sm-5 col-lg-3">
+                    <div class="card">
+                        <img width="100%" src="cache_60890167.jpg" alt="">
+                        <div class="card-body card-img-top text-center">
+                            <div class="card-title h3">John Doe</div>
+                            <div class="card-text">Some example text</div>
+                            <button class="btn btn-primary my-2">See Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 m-3 col-sm-5 col-lg-3">
+                    <div class="card">
+                        <img width="100%" src="cache_60890168.jpg" alt="">
+                        <div class="card-body card-img-top text-center">
+                            <div class="card-title h3">John Doe</div>
+                            <div class="card-text">Some example text</div>
+                            <button class="btn btn-primary my-2">See Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 m-3 col-sm-5 col-lg-3">
+                    <div class="card">
+                        <img width="100%" src="cache_60890169.jpg" alt="">
+                        <div class="card-body card-img-top text-center">
+                            <div class="card-title h3">John Doe</div>
+                            <div class="card-text">Some example text</div>
+                            <button class="btn btn-primary my-2">See Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer text-center p-3 py-5">
+            <div>
+                <div class="mb-3 h4">Mehr Erfolg durch enge Vernetzung:</div>
+            </div>
+            <span>
+                Die Ärzte des Gamma Knife Zentrums Bochum arbeiten eng mit den Fachkollegen der Universitätskliniken
+                für
+                Neurologie und Neurochirurgie, des Instituts für Radiologie, Neuroradiologie und Nuklearmedizin und
+                des
+                Onkologischen Zentrums des Knappschaftskrankenhauses Bochum sowie der Klinik für Strahlentherapie
+                und
+                Radioonkologie des Marien Hospitals Herne / Universitätsklinikum der Ruhr-Universität Bochum
+                zusammen.
+            </span>
+        </div>
+        <div style="height: 40px;">
+
         </div>
     </div>
-    <script>
-        class birthDate {
-    constructor(birth) {
-        this.birth = birth;
-    }
-    calculator_Age() {
-        const todayDate = new Date();
-        const birthDate = new Date(this.birth);
-        let diff = todayDate.getTime() - birthDate.getTime();
-        let counterY = (1000 * 60 * 60 * 24 * 365);
-        let counterM = (1000 * 60 * 60 * 24 * 31);
-        let counterD = (1000 * 60 * 60 * 24);
-        let year = Math.floor(diff / counterY);
-        diff = diff % counterY;
-        let month = Math.floor(diff / counterM);
-        diff = diff % counterM;
-        let day = Math.floor(diff / counterD);
-        let result = `years:${year} month:${month} day:${day}`
-        return result;
-    }
-}
-let input;
-document.querySelector("button").addEventListener("click", () => {
-    input = document.querySelector("input").value;
-    const newBirthday = new birthDate(input);
-    document.querySelector(".age_log").innerHTML = newBirthday.calculator_Age();
-    if(document.querySelector("input").value=null){
-        console.log('years:NaN month:NaN day:NaN');
-    }
-})
-    </script>
+    </div>
 </body>
 
 </html>
