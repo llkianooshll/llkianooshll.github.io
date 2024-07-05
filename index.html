@@ -2,147 +2,170 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOOTSTRAP TASK</title>
+    <link rel="stylesheet" href="style.css">
+    <title>TASK</title>
     <style>
-        a {
-            font-size: 20px;
-            color: rgba(0, 0, 0, 0.529);
+        * {
+            box-sizing: border-box
         }
 
-        a:hover {
-            text-decoration: none;
-            color: black;
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
         }
 
-        input {
-            height: 35px;
-            border: none;
-            border: 1px;
-            border-radius: 5px;
+        .mySlides {
+            display: none;
         }
 
-        .bg-img {
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 10px;
+            user-select: none;
+            background-color: #717171;
+            opacity: 60%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
             width: 100%;
-            height: 450px;
-            background-image: url(img-1.png);
-            background-size: cover;
-            border-radius: 14px;
+            text-align: center;
         }
 
-        .footer {
-            background-image: linear-gradient(to right, rgb(67, 67, 67), rgb(106, 178, 246));
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <div class="d-flex justify-content-center">
-            <img src="logo.png" alt="">
-        </div>
-        <!-- navbar -->
-        <div style="background-color:rgb(57, 194, 240);" class="navbar my-5 p-2">
-            <div class="navbar-nav mr-auto d-md-inline">
-                <a class="d-block d-md-inline m-3 " href="#">Link 1</a>
-                <a class="d-block d-md-inline m-3 " href="#">Link 2</a>
-                <a class="d-block d-md-inline m-3 " href="#">Link 3</a>
-            </div>
-            <div class="navbar-nav ml-auto d-md-inline">
-                <input class="text-center my-3 d-block d-md-inline" type="search" placeholder="Search">
-                <button class="btn my-3 bg-primary d-block d-md-inline"><i></i>search</button>
-            </div>
-        </div>
-        <!-- end of navbar -->
-        <div class="container-fluid">
-            <div class="row justify-content-md-center my-5">
-                <div class="col-md-8 col-12 bg-img">
-                    <div class="row justify-content-md-center">
-                        <div class="col-7">
-                            <div style="border-radius: 10px;" class="bg-secondary m-3 mt-5 p-3">
-                                <img src="cache_60889691.png" width="100%" alt="">
-                                <div class="my-2">
-                                    <span style="font-size: 1.4vw;">In der Schornau 25 A44892 Bochum</span><br>
-                                    <span style="font-size: 1.4vw;">Telefon: 0234 640 55 877 Telefax: 0234 640 55
-                                        879</span><br>
-                                    <span style="font-size: 1.4vw;">E-Mail: info@radiochirurgie-rub.de</span><br>
-                                </div>
-                                <button style="color: black;" class="btn btn-secondary my-3"><b>See profile</b></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-secondary text-center">
-                <div style="color: rgb(49, 163, 202);" class="py-3">
-                    <div class="my-3 h5">Die Radiochirurgie - Hirntumore behandeln:</div>
-                    <span class="h6">Die Behandlung von Hirntumoren (Neuroonkologie) stellt eine interdisziplinäre und
-                        technische Herausforderung dar. Im Gamma Knife Zentrum Bochum wird dazu eine spezielle Form der
-                        Strahlentherapie eingesetzt: Die Radiochirurgie. Das Gamma Knife Zentrum Bochum ist auf die
-                        Behandlung von Hirntumoren (Neuroonkologie) spezialisiert. Die Behandlung erfordert die
-                        Zusammenarbeit der medizinischen Fachrichtungen Neuroonkologie / Strahlentherapie /
-                        Neuroradiologie
-                        / Neurochirurgie.</span>
-                </div>
-                <button class="btn btn-primary my-3"><i class=" fa fa-circle-o-notch fa-spin mx-1"></i>Loading</button>
-            </div>
-            <div class="row justify-content-center my-5">
-                <div class="col-9 m-3 col-sm-5 col-lg-3">
-                    <div class="card">
-                        <img width="100%" src="cache_60890167.jpg" alt="">
-                        <div class="card-body card-img-top text-center">
-                            <div class="card-title h3">John Doe</div>
-                            <div class="card-text">Some example text</div>
-                            <button class="btn btn-primary my-2">See Profile</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-9 m-3 col-sm-5 col-lg-3">
-                    <div class="card">
-                        <img width="100%" src="cache_60890168.jpg" alt="">
-                        <div class="card-body card-img-top text-center">
-                            <div class="card-title h3">John Doe</div>
-                            <div class="card-text">Some example text</div>
-                            <button class="btn btn-primary my-2">See Profile</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-9 m-3 col-sm-5 col-lg-3">
-                    <div class="card">
-                        <img width="100%" src="cache_60890169.jpg" alt="">
-                        <div class="card-body card-img-top text-center">
-                            <div class="card-title h3">John Doe</div>
-                            <div class="card-text">Some example text</div>
-                            <button class="btn btn-primary my-2">See Profile</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer -->
-        <div class="footer text-center p-3 py-5">
-            <div>
-                <div class="mb-3 h4">Mehr Erfolg durch enge Vernetzung:</div>
-            </div>
-            <span>
-                Die Ärzte des Gamma Knife Zentrums Bochum arbeiten eng mit den Fachkollegen der Universitätskliniken
-                für
-                Neurologie und Neurochirurgie, des Instituts für Radiologie, Neuroradiologie und Nuklearmedizin und
-                des
-                Onkologischen Zentrums des Knappschaftskrankenhauses Bochum sowie der Klinik für Strahlentherapie
-                und
-                Radioonkologie des Marien Hospitals Herne / Universitätsklinikum der Ruhr-Universität Bochum
-                zusammen.
-            </span>
-        </div>
-        <div style="height: 40px;">
+    <div class="slideshow-container">
 
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="img_mountains_wide.jpg" style="width:100%">
         </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="img_nature_wide.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="img_snow_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="img_lights_wide.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
+
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 </body>
 
 </html>
